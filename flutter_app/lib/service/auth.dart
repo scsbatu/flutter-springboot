@@ -6,7 +6,7 @@ import 'package:http/http.dart';
 
 class AuthService {
 
-  String url = 'http://192.168.1.224:8080/api/employees';
+  String url = 'http://192.168.120.129:8080/api/employees';
   //Handles Auth
   handleAuth() {
     return StreamBuilder(
@@ -37,11 +37,12 @@ class AuthService {
   }
 
   Future<String> accessSecureResource(token) async {
-    print(token);
+
     Map<String, String> headers = {
       "Content-type": "application/json",
       "Authorization" :"Bearer " + token
     };
+    print("Token "+ token);
     Response response = await get(url, headers: headers);
     int statusCode = response.statusCode;
     if(statusCode != 200){

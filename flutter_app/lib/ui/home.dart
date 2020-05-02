@@ -26,7 +26,7 @@ class _DashboardPageState extends State<Home> {
                   ),
                 ),
                 RaisedButton(
-                    child: Text('Access Secure Resource'),
+                    child: Text('Access REST'),
                     color: Colors.blueAccent,
                     onPressed: () => displaySecureResource()
                 ),
