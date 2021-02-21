@@ -16,7 +16,6 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class TokenAuthenticationFilter implements WebFilter {
 
-
     private final TokenProvider tokenProvider;
 
     public static final String HEADER_PREFIX = "Bearer ";
@@ -26,7 +25,7 @@ public class TokenAuthenticationFilter implements WebFilter {
         String token = resolveToken(exchange.getRequest());
         if (StringUtils.hasText(token) && this.tokenProvider.validateToken(token)) {
             Authentication authentication = this.tokenProvider.getAuthentication(token);
-            return chain.filter(exchange).subscriberContext(ReactiveSecurityContextHolder.withAuthentication(authentication));
+            return chain.filter(exchange).contextWrite(ReactiveSecurityContextHolder.withAuthentication(authentication));
         }
         return chain.filter(exchange);
     }
