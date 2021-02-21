@@ -37,5 +37,3 @@ public class TokenAuthenticationFilter implements WebFilter {
         return null;
     }
 }
-//https://github.com/PacktPublishing/Hands-On-Spring-Security-5-for-Reactive-Applications/blob/master/Chapter06/spring-boot-security-webflux-jwt/src/main/java/com/packtpub/book/ch06/springsecurity/auth/JWTAuthWebFilter.java
-//https://medium.com/zero-equals-false/protect-rest-apis-with-spring-security-reactive-and-jwt-7b209a0510f1
