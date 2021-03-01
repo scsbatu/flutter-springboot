@@ -26,6 +26,18 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
+
+	// https://mvnrepository.com/artifact/org.mockito/mockito-all
+	//testImplementation('org.mockito:mockito-all:1.10.19')
+	// https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4
+	// https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito
+	testImplementation('org.powermock:powermock-api-mockito:1.7.4')
+	// https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4
+	testImplementation('org.powermock:powermock-module-junit4:2.0.9')
+
+
+
+
 }
 
 test {
